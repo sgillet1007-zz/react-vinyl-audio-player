@@ -1,33 +1,51 @@
-.App {
-  text-align: center;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.vinyl-wrapper {
+  position: relative;
+  display: block;
+  margin: 150px;
+  width: 200px;
+  height: 200px;
+  /* transform: rotateX(10deg) rotateZ(-20deg); */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.spinning {
+ animation: spin 1.3s 0s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
+.vinyl {
+  position: absolute;
+  top: 70px;
+  background: #fff9c4;
+  width: 58px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid #cbc693;
+  border-width: 29px 0px;
+  border-left: 0;
+  box-shadow: 0px 0px 3px #fff9c4, 0px 0px 0px 10px #cbc693, 0px 0px 15px #fff9c4, 0px 0px 0px 16px #000, 0px 0px 0px 17px #252424, 0px 0px 0px 18px #000, 0px 0px 0px 19px #313030, 0px 0px 0px 20px #000, 0px 0px 0px 21px #3a3838, 0px 0px 0px 22px #000, 0px 0px 0px 23px #2b2a2a, 0px 0px 0px 24px #000, 0px 0px 0px 25px #313030, 0px 0px 0px 26px #000, 0px 0px 0px 27px #313030, 0px 0px 0px 28px #000, 0px 0px 0px 29px #333333, 0px 0px 0px 30px #000, 0px 0px 0px 31px #333232, 0px 0px 0px 32px #000, 0px 0px 0px 33px #4c4a4a, 0px 0px 0px 34px #000, 0px 0px 0px 35px #2f2e2e, 0px 0px 0px 36px #000, 0px 0px 0px 37px #252424, 0px 0px 0px 38px #000, 0px 0px 0px 39px #2f2e2e, 0px 0px 0px 40px #000, 0px 0px 0px 41px #2f2e2e, 0px 0px 0px 42px #000, 0px 0px 0px 55px #2f2e2e, 0px 0px 0px 56px #000, 0px 0px 0px 57px #2f2e2e, 0px 0px 0px 58px #cecece, 0px 0px 0px 59px #2f2e2e;
 }
 
-@keyframes App-logo-spin {
-  from {
+.vinyl:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  top: calc(50% - 3px);
+  left: calc(50% - 3px);
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
