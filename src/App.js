@@ -7,7 +7,7 @@ class App extends Component {
     this.state = {
       playing: false
     }
-    const {audioUri} = this.props
+    const {audioUri} = this.props.data
     this.audioTrack = new Audio(audioUri)
   }
 
@@ -22,7 +22,7 @@ class App extends Component {
 
   render() {
     const isPlaying = this.state.playing ? 'spinning' : ''
-    const {title} = this.props
+    const {title} = this.props.data
     return (
       <div onClick={this.handleClick} className="vinyl-wrapper">
         <div className={`vinyl ${isPlaying}`} >{title}</div>

@@ -5,7 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import audioUri from './tct_mashup.mp3'
 
-ReactDOM.render(<App audioUri={audioUri} title={"TCT"} />, document.getElementById('root'));
+const data = {
+    audioUri: audioUri,
+    title: "TCT"
+}
+
+ReactDOM.render(<App data={data} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
