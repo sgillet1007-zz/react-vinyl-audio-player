@@ -15,11 +15,11 @@ const App = props => {
     }
   }
 
-    return (
-      <div onClick={handleClick} className="vinyl-wrapper">
-        <div className={`vinyl ${isPlaying}`} >{title}</div>
-      </div>
-    );
+  return (
+    <div onClick={handleClick} className="vinyl-wrapper">
+      <div className={`vinyl ${isPlaying}`} >{title}</div>
+    </div>
+  );
 }
 
 export default App;
