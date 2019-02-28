@@ -7,7 +7,8 @@ import audioUri from './tct_mashup.mp3'
 
 const data = {
     audioUri: audioUri,
-    title: "TCT"
+    title: "TCT",
+    audioTrack: new Audio(audioUri)
 }
 
 ReactDOM.render(<App data={data} />, document.getElementById('root'));
